@@ -1,4 +1,5 @@
 package com.jaber.scractch
+
 import android.graphics.Typeface
 import androidx.compose.foundation.Canvas
 import androidx.compose.foundation.background
@@ -87,7 +88,7 @@ fun CardScratch(
                 ) {
                     paint.apply {
                         isAntiAlias = true
-                        textSize = 36f
+                        textSize = 34f
                         typeface = Typeface.create(Typeface.DEFAULT, Typeface.BOLD)
                         textScaleX = 2.0f
                     }

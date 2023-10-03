@@ -3,13 +3,17 @@ package com.jaber.scratchcard
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
-import androidx.compose.material3.MaterialTheme
+import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Surface
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.ImageBitmap
@@ -28,7 +32,7 @@ class MainActivity : ComponentActivity() {
                 // A surface container using the 'background' color from the theme
                 Surface(
                     modifier = Modifier.fillMaxSize(),
-                    color = MaterialTheme.colorScheme.background,
+                    color = Color.Black,
                 ) {
                     Scratch()
                 }
@@ -39,19 +43,31 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun Scratch(modifier: Modifier = Modifier) {
-    Column {
-        CardScratch(
-            cardBackgroundColor = Color.Blue.copy(0.7f),
-            title = "Please scratch the card",
-            titleTextColor = Color.White,
-            scratchText = "No coupon code found",
-        )
-        Spacer(modifier = Modifier.height(20.dp))
-        ImageScratch(
-            overlayImage = ImageBitmap.imageResource(R.drawable.overlay),
-            baseImage =
-            ImageBitmap.imageResource(R.drawable.base),
-        )
+    Column(verticalArrangement = Arrangement.Center) {
+        Box(
+            modifier = Modifier.align(Alignment.CenterHorizontally).fillMaxWidth().height(200.dp)
+                .padding(start = 16.dp, end = 16.dp),
+        ) {
+            ImageScratch(
+                overlayImage = ImageBitmap.imageResource(R.drawable.overlay),
+                baseImage =
+                ImageBitmap.imageResource(R.drawable.base),
+            )
+        }
+        Spacer(modifier = Modifier.height(12.dp))
+
+        Box(
+            modifier = Modifier.align(Alignment.CenterHorizontally).fillMaxWidth()
+                .height(200.dp)
+                .padding(start = 16.dp, end = 16.dp),
+        ) {
+            CardScratch(
+                cardBackgroundColor = Color.Red.copy(0.6f),
+                title = "Scratch & Win",
+                titleTextColor = Color.White,
+                scratchText = "Coupon code is: 457896",
+            )
+        }
     }
 }
 

@@ -1,4 +1,5 @@
 package com.jaber.scractch
+
 import androidx.compose.foundation.Canvas
 import androidx.compose.foundation.gestures.detectDragGestures
 import androidx.compose.foundation.layout.Box
@@ -19,6 +20,7 @@ import androidx.compose.ui.graphics.ImageBitmap
 import androidx.compose.ui.graphics.Path
 import androidx.compose.ui.graphics.drawscope.clipPath
 import androidx.compose.ui.input.pointer.pointerInput
+import androidx.compose.ui.res.imageResource
 import androidx.compose.ui.tooling.preview.Devices
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.Dp
@@ -38,7 +40,8 @@ fun ImageScratch(
     val movedOffsetState = remember { mutableStateOf<Offset?>(null) }
 
     Box(
-        modifier = Modifier.fillMaxWidth()
+        modifier = Modifier
+            .fillMaxWidth()
             .fillMaxHeight()
             .padding(start = startPadding, end = endPadding),
     ) {
@@ -77,4 +80,11 @@ fun ImageScratch(
 @Composable
 @Preview(device = Devices.PIXEL_4)
 fun ImageScratchPreview() {
+    ImageScratch(
+        overlayImage = ImageBitmap.imageResource(R.drawable.overlay),
+        baseImage = ImageBitmap.imageResource(R.drawable.base),
+        isIntersect = true,
+        startPadding = 16.dp,
+        endPadding = 16.dp,
+    )
 }
