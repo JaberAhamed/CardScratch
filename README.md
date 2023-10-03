@@ -21,27 +21,64 @@ CardScratching is an Android library that empowers app developers to integrate a
 ![API](https://img.shields.io/badge/Api-24+-yellow)
 
 ## Preview
-<img src="./images/before.png" alt="before" width="200" /> &nbsp;&nbsp;&nbsp;    <img src="./images/after.png" alt="before" width="200" />
+
+<p align="center">
+<img src="assets/card.gif" width="280"/>
+</p>
 
 
+<p align="center">
+<img src="assets/scratch.gif" width="280"/>
+</p>
 
-
-
-## Usage
-
-### Dependency
-
-#### Add the followings to your project level `build.gradle` file.
-
+## Adding the library to your project✨
+Add the followings to your project level `build.gradle` file.
 ```groovy
 dependencies {
   implementation 'com.github.JaberAhamed:CardScratch:1.0'
 }
 ```
 
+Add the following to your **root** `build.gradle` file:
+```gradle
+allprojects {
+	repositories {
+		maven { url 'https://jitpack.io' }
+	}
+}
+```
+
+
 ### Requirements
 
 **1.** Minimum SDK for this library is **API 24**.
+
+## Usage
+For the **ImageScratch** you have to pass two image bitmap arguments for the overly and base image. The base image will show after the scratch.
+```
+ImageScratch(
+              overlayImage = ImageBitmap.imageResource(R.drawable.overlay),
+              baseImage =
+              ImageBitmap.imageResource(R.drawable.base),
+          )
+```
+
+For the **CardScratch** you have to pass *title* and *scratchText* as your requirements. The *scratchText* will show after the scratch.
+
+```
+CardScratch(
+            cardBackgroundColor = Color.Red.copy(0.6f),
+            title = "Scratch & Win",
+            titleTextColor = Color.White,
+            scratchText = "Coupon code is: 457896",
+        )
+```
+
+## Find this library useful? ❤️
+
+Give a ⭐️ if this project helped you!
+
+
 
 ## License
 
