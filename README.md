@@ -1,12 +1,19 @@
-# CardScratch
+<h1 align="center">CardScratch</h1>
 
-"CardScratching is an Android library that empowers app developers to integrate an interactive scratch card feature into their applications. With CardScratching, users can virtually 'scratch' a card on their device's screen, revealing concealed content underneath. This content is often used to showcase coupon codes, discounts, or other rewards, enhancing user engagement and creating an enjoyable interaction. The library offers customization options for the scratch card's appearance, making it easy to match the app's design. By leveraging CardScratching, developers can seamlessly introduce gamified elements to their apps, resulting in increased user interaction and satisfaction.
+<p align="center">
+  <a href="https://opensource.org/licenses/Apache-2.0"><img alt="License" src="https://img.shields.io/badge/License-Apache%202.0-blue.svg"/></a>
+  <img alt="API" src="https://img.shields.io/badge/Api%2024+-50f270?logo=android&logoColor=black&style=for-the-badge"/></a>
+  <img alt="Kotlin" src="https://img.shields.io/badge/Kotlin-a503fc?logo=kotlin&logoColor=white&style=for-the-badge"/></a>
+  <img alt="Jetpack Compose" src="https://img.shields.io/static/v1?style=for-the-badge&message=Jetpack+Compose&color=4285F4&logo=Jetpack+Compose&logoColor=FFFFFF&label="/></a>
 
-1. **Interactive Scratching:** The library provides a touch-sensitive interface that simulates the act of scratching a surface to unveil hidden information.
-2. **Customizable Design:** Developers can customize the appearance of the scratch card, including its size, shape, colors, and text.
-3. **Revealing Content:** Underneath the scratched area, the library reveals content such as a coupon code, discount information, or any other rewards.
-4. **User Engagement:** The scratch card feature adds an element of gamification and user engagement to the application, encouraging users to interact with the app to reveal hidden rewards.
-5. **Integration:** The library can be integrated easily into existing Android apps, providing developers with a pre-built solution for adding scratch card functionality.
+
+CardScratching is an Android library that empowers app developers to integrate an interactive scratch card feature into their applications. With CardScratching, users can virtually 'scratch' a card on their device's screen, revealing concealed content underneath. This content is often used to showcase coupon codes, discounts, or other rewards, enhancing user engagement and creating an enjoyable interaction. The library offers customization options for the scratch card's appearance, making it easy to match the app's design. By leveraging CardScratching, developers can seamlessly introduce gamified elements to their apps, resulting in increased user interaction and satisfaction.
+
+- **Interactive Scratching:** The library provides a touch-sensitive interface that simulates the act of scratching a surface to unveil hidden information.
+- **Customizable Design:** Developers can customize the appearance of the scratch card, including its size, shape, colors, and text.
+- **Revealing Content:** Underneath the scratched area, the library reveals content such as a coupon code, discount information, or any other rewards.
+- **User Engagement:** The scratch card feature adds an element of gamification and user engagement to the application, encouraging users to interact with the app to reveal hidden rewards.
+- **Integration:** The library can be integrated easily into existing Android apps, providing developers with a pre-built solution for adding scratch card functionality.
 
 
 
