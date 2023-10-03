@@ -44,17 +44,17 @@ class MainActivity : ComponentActivity() {
 @Composable
 fun Scratch(modifier: Modifier = Modifier) {
     Column(verticalArrangement = Arrangement.Center) {
-        Box(
-            modifier = Modifier.align(Alignment.CenterHorizontally).fillMaxWidth().height(200.dp)
-                .padding(start = 16.dp, end = 16.dp),
-        ) {
-            ImageScratch(
-                overlayImage = ImageBitmap.imageResource(R.drawable.overlay),
-                baseImage =
-                ImageBitmap.imageResource(R.drawable.base),
-            )
-        }
-        Spacer(modifier = Modifier.height(12.dp))
+//        Box(
+//            modifier = Modifier.align(Alignment.CenterHorizontally).fillMaxWidth().height(200.dp)
+//                .padding(start = 16.dp, end = 16.dp),
+//        ) {
+//            ImageScratch(
+//                overlayImage = ImageBitmap.imageResource(R.drawable.overlay),
+//                baseImage =
+//                ImageBitmap.imageResource(R.drawable.base),
+//            )
+//        }
+//        Spacer(modifier = Modifier.height(12.dp))
 
         Box(
             modifier = Modifier.align(Alignment.CenterHorizontally).fillMaxWidth()
