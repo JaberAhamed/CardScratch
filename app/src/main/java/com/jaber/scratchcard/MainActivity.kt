@@ -43,21 +43,23 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun Scratch(modifier: Modifier = Modifier) {
-    Column(verticalArrangement = Arrangement.Center) {
-//        Box(
-//            modifier = Modifier.align(Alignment.CenterHorizontally).fillMaxWidth().height(200.dp)
-//                .padding(start = 16.dp, end = 16.dp),
-//        ) {
-//            ImageScratch(
-//                overlayImage = ImageBitmap.imageResource(R.drawable.overlay),
-//                baseImage =
-//                ImageBitmap.imageResource(R.drawable.base),
-//            )
-//        }
-//        Spacer(modifier = Modifier.height(12.dp))
+    Column(
+        modifier = modifier,
+        verticalArrangement = Arrangement.Center
+    ) {
+        ImageScratch(
+            modifier = Modifier.weight(0.8f),
+            overlayImage = ImageBitmap.imageResource(R.drawable.overlay),
+            baseImage =
+            ImageBitmap.imageResource(R.drawable.base),
+        )
+
+        Spacer(modifier = Modifier.height(20.dp))
 
         Box(
-            modifier = Modifier.align(Alignment.CenterHorizontally).fillMaxWidth()
+            modifier = Modifier
+                .align(Alignment.CenterHorizontally)
+                .fillMaxWidth()
                 .height(200.dp)
                 .padding(start = 16.dp, end = 16.dp),
         ) {
@@ -68,6 +70,7 @@ fun Scratch(modifier: Modifier = Modifier) {
                 scratchText = "Coupon code is: 457896",
             )
         }
+        Spacer(modifier = Modifier.height(20.dp))
     }
 }
 

@@ -56,12 +56,16 @@ fun CardScratch(
                     color = cardBackgroundColor,
                     shape = RoundedCornerShape(6.dp),
 
-                ),
+                    ),
             horizontalAlignment = Alignment.CenterHorizontally,
 
-        ) {
+            ) {
             Text(
-                modifier = Modifier.padding(top = 18.dp, start = 16.dp, end = 16.dp),
+                modifier = Modifier.padding(
+                    top = 18.dp,
+                    start = 16.dp,
+                    end = 16.dp
+                ),
                 text = title,
                 color = titleTextColor,
                 fontSize = 30.sp,
@@ -69,9 +73,14 @@ fun CardScratch(
             Spacer(modifier = Modifier.weight(1f))
 
             Box(
-                modifier = Modifier.fillMaxWidth()
+                modifier = Modifier
+                    .fillMaxWidth()
                     .height(80.dp)
-                    .padding(top = 20.dp, start = 16.dp, end = 16.dp),
+                    .padding(
+                        top = 20.dp,
+                        start = 16.dp,
+                        end = 16.dp
+                    ),
             ) {
                 val paint = Paint().asFrameworkPaint()
                 Canvas(
@@ -111,6 +120,7 @@ fun CardScratch(
         }
     }
 }
+
 
 @Composable
 @Preview(device = Devices.PIXEL_4)

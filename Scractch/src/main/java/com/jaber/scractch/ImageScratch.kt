@@ -1,11 +1,20 @@
 package com.jaber.scractch
 
+import androidx.compose.animation.AnimatedVisibility
+import androidx.compose.animation.core.tween
+import androidx.compose.animation.fadeIn
+import androidx.compose.animation.fadeOut
+import androidx.compose.animation.scaleIn
+import androidx.compose.animation.scaleOut
 import androidx.compose.foundation.Canvas
+import androidx.compose.foundation.background
 import androidx.compose.foundation.gestures.detectDragGestures
 import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.mutableStateOf
@@ -16,6 +25,7 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.geometry.Rect
 import androidx.compose.ui.graphics.ClipOp
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.ImageBitmap
 import androidx.compose.ui.graphics.Path
 import androidx.compose.ui.graphics.drawscope.clipPath
@@ -32,18 +42,14 @@ import com.vivek.scratchcardeffect.models.DraggedPath
 fun ImageScratch(
     overlayImage: ImageBitmap,
     baseImage: ImageBitmap,
-    isIntersect: Boolean = true,
-    startPadding: Dp = 16.dp,
-    endPadding: Dp = 16.dp,
+    modifier: Modifier = Modifier,
+    isIntersect: Boolean = true
 ) {
     val currentPathState = remember { mutableStateOf(DraggedPath(path = Path())) }
     val movedOffsetState = remember { mutableStateOf<Offset?>(null) }
 
     Box(
-        modifier = Modifier
-            .fillMaxWidth()
-            .fillMaxHeight()
-            .padding(start = startPadding, end = endPadding),
+        modifier = modifier,
     ) {
         var clipOp = ClipOp.Intersect
         Canvas(
@@ -73,7 +79,9 @@ fun ImageScratch(
             clipPath(path = currentPathState.value.path, clipOp = clipOp) {
                 drawImage(baseImage, dstSize = imageSize)
             }
+
         }
+        
     }
 }
 
@@ -84,7 +92,9 @@ fun ImageScratchPreview() {
         overlayImage = ImageBitmap.imageResource(R.drawable.overlay),
         baseImage = ImageBitmap.imageResource(R.drawable.base),
         isIntersect = true,
-        startPadding = 16.dp,
-        endPadding = 16.dp,
+        modifier = Modifier
+            .fillMaxWidth()
+            .fillMaxHeight()
+            .padding(horizontal = 16.dp)
     )
 }
