@@ -1,4 +1,4 @@
-package com.vivek.scratchcardeffect.models
+package com.jaber.scractch.models
 
 import androidx.compose.ui.graphics.Path
 
